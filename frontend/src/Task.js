@@ -1,8 +1,12 @@
-class Task {
-  constructor(id, task, done) {
-    this.id = id;
-    this.task = task;
-    this.done = done;
+import React, { Component } from 'react';
+
+class Task extends Component {
+  render() {
+    return (
+      <li>
+        { this.props.task.task }
+      </li>
+    );
   }
 }
 
