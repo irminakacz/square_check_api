@@ -1,0 +1,8 @@
+from django.conf.urls import url
+# from rest_framework.urlpatterns import format_suffix_patters
+from square_check import views
+
+urlpatterns = [
+    url(r'^tasks/$', views.TaskList.as_view()),
+    url(r'^tasks/(?P<pk>[0-9]+)/$', views.TaskDetail.as_view())
+]
