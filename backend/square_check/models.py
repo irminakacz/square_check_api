@@ -7,6 +7,7 @@ class List(models.Model):
 
 
 class Task(models.Model):
-    list = models.ForeignKey(List)
+    list = models.ForeignKey(List, related_name="tasks",
+                             on_delete=models.CASCADE)
     task = models.TextField()
     done = models.BooleanField(default=False)
