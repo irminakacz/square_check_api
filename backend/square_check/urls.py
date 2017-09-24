@@ -1,12 +1,11 @@
-from django.conf.urls import url
-from rest_framework.urlpatterns import format_suffix_patterns
+from django.conf.urls import url, include
 from square_check import views
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'tasks', views.TaskViewSet)
+router.register(r'lists', views.ListViewSet)
 
 urlpatterns = [
-    url(r'^tasks/$', views.TaskList.as_view()),
-    url(r'^tasks/(?P<pk>[0-9]+)/$', views.TaskDetail.as_view()),
-    url(r'^lists/$', views.ListList.as_view()),
-    url(r'^lists/(?P<pk>[0-9]+)/$', views.ListDetail.as_view())
+    url(r'^', include(router.urls)),
 ]
-
-urlpatterns = format_suffix_patterns(urlpatterns)
