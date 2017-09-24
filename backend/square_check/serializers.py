@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from square_check.models import Task, List
+from django.contrib.auth.models import User
 
 
 class TaskSerializer(serializers.ModelSerializer):
@@ -18,3 +19,9 @@ class ListSerializer(serializers.ModelSerializer):
         fields = ('id', 'title', 'color', 'tasks')
 
 
+class UserSerializer(serializers.ModelSerializer):
+    lists = ListSerializer(many=True)
+
+    class Meta:
+        model = User
+        fields = ('id', 'username', 'lists')
