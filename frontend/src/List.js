@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Task from './Task';
+import './List.css';
 
 class List extends Component {
 
@@ -36,9 +37,12 @@ class List extends Component {
     });
 
     return (
-      <ul>
-        { tasks }
-      </ul>
+      <div className="List">
+        <div id="list-title">List</div>
+        <div id="list-tasks">
+          { tasks }
+        </div>
+      </div>
     );
   }
 }

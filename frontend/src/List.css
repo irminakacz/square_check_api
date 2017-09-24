@@ -1,0 +1,16 @@
+.List {
+  background-color: white;
+  width: 27vw;
+  margin: 1.5vw;
+  box-shadow: 0.5vw 0.7vw 0 #162e58;
+}
+
+#list-title {
+  font-size: 2vw;
+  padding: 0.5vw;
+  background-color: #a7aec7;
+}
+
+#list-tasks {
+  padding: 0.5vw;
+}

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
+import './Task.css';
 
 class Task extends Component {
   render() {
     return (
-      <li>
-        { this.props.task.task }
-      </li>
+      <div className="Task">
+        <span>[ ] { this.props.task.task }</span>
+        <span id="delete">X</span>
+      </div>
     );
   }
 }

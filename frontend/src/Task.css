@@ -1,0 +1,9 @@
+.Task {
+  font-size: 1.6vw;
+  padding: 0.5vw;
+  width: 25vw;
+}
+
+#delete {
+  float: right;
+}
