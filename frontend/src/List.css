@@ -1,4 +1,5 @@
 .List {
+  display: inline-block;
   background-color: white;
   width: 27vw;
   margin: 1.5vw;
