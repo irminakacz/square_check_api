@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import List from './List';
+import './App.css'
 
 class App extends Component {
 
@@ -43,7 +44,12 @@ class App extends Component {
     });
     return (
       <div>
-        { lists }
+        <div id="navbar">
+          SquareCheck
+        </div>
+        <div>
+          { lists }
+        </div>
       </div>
     );
   }
