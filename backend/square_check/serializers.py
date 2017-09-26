@@ -12,11 +12,12 @@ class TaskSerializer(serializers.ModelSerializer):
 
 
 class ListSerializer(serializers.ModelSerializer):
+    user = serializers.ReadOnlyField(source="user.username")
     tasks = TaskSerializer(many=True)
 
     class Meta:
         model = List
-        fields = ('id', 'title', 'color', 'tasks')
+        fields = ('id', 'title', 'color', 'tasks', 'user')
 
 
 class UserSerializer(serializers.ModelSerializer):

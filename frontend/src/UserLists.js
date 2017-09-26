@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import List from './List';
 
 class UserLists extends Component {
