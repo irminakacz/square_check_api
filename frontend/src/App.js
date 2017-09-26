@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import List from './List';
+import UserLists from './UserLists';
 import './App.css'
 
 class App extends Component {
@@ -8,50 +8,80 @@ class App extends Component {
     super();
 
     this.state = {
-      lists: []
+      token: "",
+      username: "",
+      password: ""
     }
+
+    this.saveUsername = this.saveUsername.bind(this);
+    this.savePassword = this.savePassword.bind(this);
+    this.authenticate = this.authenticate.bind(this);
   }
 
-  componentDidMount() {
-    let lists = [];
-    this.props.conn.get('/lists').then(response => {
+  saveUsername(event) {
+    this.setState({
+      username: event.target.value
+    });
+  }
 
-      response.data.forEach(list => {
-        lists.push({
-          id: list.id,
-          title: list.title, 
-          color: list.color,
-          tasks: list.tasks
-        });
-      })
+  savePassword(event) {
+    this.setState({
+      password: event.target.value
+    });
+  }
 
+  authenticate(event) {
+    event.preventDefault();
+    this.props.conn.post('/square-check-auth/', {
+      username: this.state.username,
+      password: this.state.password
+    }).then(response => {
+      console.log(response.data.token);
       this.setState({
-        lists: lists
+        token: response.data.token
       });
     });
-
   }
 
   render() {
-    const lists = this.state.lists.map(list => {
+    if (this.state.token.length) {
       return (
-        <List 
-          key={ "list_" + list.id } 
-          list={ list } 
-          conn={ this.props.conn }
-        />
-      );
-    });
-    return (
-      <div>
-        <div id="navbar">
-          SquareCheck
-        </div>
         <div>
-          { lists }
+        <div id="navbar">
+        SquareCheck
         </div>
-      </div>
-    );
+        <UserLists 
+          conn={ this.props.conn } 
+          token={ this.state.token }
+        />
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <div id="navbar">
+          SquareCheck
+          </div>
+          <form>
+            Username: 
+            <input 
+              type="text" 
+              value={ this.state.username } 
+              onChange={ this.saveUsername }
+            />
+            <br />
+            Password: 
+            <input
+              type="password"
+              value={ this.state.password }
+              onChange={ this.savePassword }
+            />
+            <br />
+            <button type="submit" onClick={ this.authenticate }>Login</button>
+          </form>
+        </div>
+      )
+    }
   }
 }
 
