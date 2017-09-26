@@ -14,7 +14,7 @@ class UserLists extends Component {
   componentDidMount() {
     let lists = [];
     this.props.conn.get("/users/", {
-      headers: { Authorization: "JWT " + this.props.token }
+      headers: { Authorization: "JWT " + localStorage.getItem("token") }
     }).then(response => {
       response.data[0].lists.forEach(list => {
         lists.push({
