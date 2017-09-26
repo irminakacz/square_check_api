@@ -20,6 +20,8 @@ class ListViewSet(viewsets.ModelViewSet):
 
 
 class UserViewSet(viewsets.ReadOnlyModelViewSet):
-    queryset = User.objects.all()
     serializer_class = UserSerializer
     permission_classes = (permissions.IsAuthenticated,)
+
+    def get_queryset(self):
+        return User.objects.filter(username=self.request.user)
