@@ -10,3 +10,7 @@
   color: white;
   padding: 0vw 0vw 0.7vw 0.7vw;
 }
+
+#navbar div {
+  display: inline;
+}

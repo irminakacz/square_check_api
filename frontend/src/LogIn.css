@@ -1,0 +1,42 @@
+#form {
+  background-color: white;
+  width: 42vw;
+  height: 24vw;
+  margin: 12vw auto 12vw auto;
+  box-shadow: 0.7vw 0.7vw 0 #162e58;
+}
+
+table {
+  padding: 2.5vw;
+}
+
+td {
+  padding: 0.4vw;
+}
+
+button {
+  font-family: mono;
+  padding: 1vw;
+  color: white;
+  background-color: #007380;
+  border: solid 0.2vw #007380;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #06464d;
+}
+
+#login-header {
+  font-size: 2.5vw;
+  padding: 0.5vw;
+  background-color: #e5ae72;
+  color: white;
+  padding: 1vw;
+}
+
+input {
+  border: solid 0.2vw #162e58;
+  padding: 0.3vw;
+  font-family: mono;
+}

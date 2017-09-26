@@ -1,0 +1,11 @@
+#logout {
+  float:right;
+  font-size: 3vw;
+  padding: 0.2vw;
+  margin: 0.5vw 1.5vw 0.5vw 0.5vw;
+}
+
+#logout:hover {
+  background-color: #06464d;
+  cursor: pointer;
+}

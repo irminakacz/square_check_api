@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './LogIn.css';
 
 class LogIn extends Component {
 
@@ -49,29 +50,50 @@ class LogIn extends Component {
         <div id="navbar">
           SquareCheck
         </div>
-        <form>
+        
+        <div id="form">
+          <div id="login-header">
+            Login
+          </div>
 
-          Username: 
-          <input 
-          type="text" 
-          value={ this.state.username } 
-          onChange={ this.saveUsername }
-          />
-
-          <br />
-
-          Password: 
-          <input
-          type="password"
-          value={ this.state.password }
-          onChange={ this.savePassword }
-          />
-
-          <br />
-
-          <button type="submit" onClick={ this.authenticate }>Login</button>
-
-        </form>
+          <form>
+            <table>
+            <tbody>
+            <tr>
+              <td>
+              Username: 
+              </td>
+              <td>
+              <input
+              type="text" 
+              value={ this.state.username } 
+              onChange={ this.saveUsername }
+              />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              Password: 
+              </td>
+              <td>
+              <input
+              type="password"
+              value={ this.state.password }
+              onChange={ this.savePassword }
+              />
+              </td>
+            </tr>
+            <tr>
+              <td>
+              </td>
+              <td>
+              <button type="submit" onClick={ this.authenticate }>Login</button>
+              </td>
+            </tr>
+            </tbody>
+            </table>
+          </form>
+        </div>
       </div>
     )
   }

@@ -26,7 +26,7 @@ class App extends Component {
       return (
         <div>
         <div id="navbar">
-        SquareCheck
+          SquareCheck
         <LogOut logout={ this.logout }/>
         </div>
         <UserLists 
