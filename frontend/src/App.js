@@ -36,7 +36,6 @@ class App extends Component {
       username: this.state.username,
       password: this.state.password
     }).then(response => {
-      console.log(response.data.token);
       this.setState({
         token: response.data.token
       });

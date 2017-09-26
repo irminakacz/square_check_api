@@ -14,25 +14,25 @@ class UserLists extends Component {
 
   componentDidMount() {
     let lists = [];
+    let token = "JWT " + this.props.token;
     let instance = axios.create({
       baseURL: 'http://localhost:8000',
-      headers: { "Authorization": "JWT " + this.props.token }
+      headers: { Authorization: token }
     })
       
-    instance.get("/users").then(response => {
-      console.log(response);
-      // response.data.lists.forEach(list => {
-      //   lists.push({
-      //     id: list.id,
-      //     title: list.title, 
-      //     color: list.color,
-      //     tasks: list.tasks
-      //   });
-      // })
+    instance.get("/users/?format=json").then(response => {
+      response.data[1].lists.forEach(list => {
+        lists.push({
+          id: list.id,
+          title: list.title, 
+          color: list.color,
+          tasks: list.tasks
+        });
+      })
 
-      // this.setState({
-      //   lists: lists
-      // });
+      this.setState({
+        lists: lists
+      });
     });
 
   }
