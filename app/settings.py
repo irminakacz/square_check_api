@@ -145,7 +145,8 @@ REST_FRAMEWORK = {
 }
 
 CORS_ORIGIN_WHITELIST = (
-    'localhost:3000'
+    'localhost:3000',
+    'https://square-check.herokuapp.com'
 )
 
 DATABASES['default'] = dj_database_url.config()
