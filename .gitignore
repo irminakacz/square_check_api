@@ -1,4 +1,4 @@
-/backend/app/__pycache__
-/backend/.virtualenv
-/backend/square_check/__pycache__
-/backend/square_check/migrations/__pycache__
+/app/__pycache__
+/.virtualenv
+/square_check/__pycache__
+/square_check/migrations/__pycache__
