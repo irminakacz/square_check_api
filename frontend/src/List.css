@@ -1,17 +1,79 @@
 .List {
-  display: inline-block;
   background-color: white;
-  width: 27vw;
-  margin: 1.5vw;
-  box-shadow: 0.5vw 0.7vw 0 #162e58;
 }
 
 #list-title {
-  font-size: 2vw;
-  padding: 0.5vw;
   background-color: #e5ae72;
 }
 
-#list-tasks {
-  padding: 0.5vw;
+@media screen and (max-width: 568px) {
+  .List {
+    display: block;
+    width: 89vw;
+    margin: 5vw auto 5vw auto;
+    box-shadow: 1.2vw 1.5vw 0 #162e58;
+  }
+
+  #list-title {
+    font-size: 5.5vw;
+    padding: 1.5vw;
+  }
+
+  #list-tasks {
+    padding: 2vw;
+  }
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  .List {
+    display: block;
+    width: 80vw;
+    margin: 3.5vw auto 3.5vw auto;
+    box-shadow: 1vw 1.2vw 0 #162e58;
+  }
+
+  #list-title {
+    font-size: 3.5vw;
+    padding: 1.2vw;
+  }
+
+  #list-tasks {
+    padding: 1.5vw;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  .List {
+    display: inline-block;
+    width: 45vw;
+    margin: 3vw 0vw 0vw 3vw;
+    box-shadow: 0.5vw 0.8vw 0 #162e58;
+  }
+
+  #list-title {
+    font-size: 2vw;
+    padding: 0.8vw;
+  }
+
+  #list-tasks {
+    padding: 0.8vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .List {
+    display: inline-block;
+    width: 22.2vw;
+    margin: 2vw 0vw 0vw 2vw;
+    box-shadow: 0.3vw 0.4vw 0 #162e58;
+  }
+
+  #list-title {
+    font-size: 1.1vw;
+    padding: 0.4vw;
+  }
+
+  #list-tasks {
+    padding: 0.5vw;
+  }
 }

@@ -61,10 +61,11 @@ class LogIn extends Component {
             <tbody>
             <tr>
               <td>
-              Username: 
+              <label htmlFor="username">Username: </label>
               </td>
               <td>
               <input
+              id="username"
               type="text" 
               value={ this.state.username } 
               onChange={ this.saveUsername }
@@ -73,10 +74,11 @@ class LogIn extends Component {
             </tr>
             <tr>
               <td>
-              Password: 
+              <label htmlFor="password">Password: </label>
               </td>
               <td>
               <input
+              id="password"
               type="password"
               value={ this.state.password }
               onChange={ this.savePassword }

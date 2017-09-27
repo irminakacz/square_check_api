@@ -1,13 +1,167 @@
+@media screen and (max-width: 568px) {
+  #form {
+    width: 100vw;
+    height: 50vw;
+    margin: 12vw auto 12vw auto;
+    box-shadow: 0.7vw 0.7vw 0 #162e58;
+  }
+
+  table {
+    padding: 3vw;
+  }
+
+  td {
+    padding: 0.2vw;
+  }
+
+  #login-header {
+    font-size: 5vw;
+    background-color: #e5ae72;
+    color: white;
+    padding: 1.5vw;
+  }
+
+  label {
+    font-size: 4vw;
+  }
+
+  input {
+    border: solid 0.2vw #162e58;
+    padding: 1.5vw;
+    font-family: mono;
+    width: 60vw;
+  }
+
+  button {
+    padding: 1vw;
+    font-size: 4vw;
+  }
+}
+
+@media screen and (min-width: 569px) and (max-width: 768px) {
+  #form {
+    width: 56vw;
+    height: 34vw;
+    margin: 12vw auto 12vw auto;
+    box-shadow: 0.7vw 0.7vw 0 #162e58;
+  }
+
+  table {
+    padding: 2.5vw;
+  }
+
+  td {
+    padding: 1vw;
+  }
+
+  #login-header {
+    font-size: 3.5vw;
+    background-color: #e5ae72;
+    color: white;
+    padding: 1.5vw;
+  }
+
+  label {
+    font-size: 3vw;
+  }
+
+  input {
+    border: solid 0.2vw #162e58;
+    padding: 1vw;
+    font-family: mono;
+    width: 28vw;
+  }
+
+  button {
+    padding: 1vw;
+    font-size: 2.5vw;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 999px) {
+  #form {
+    background-color: white;
+    width: 44vw;
+    height: 28vw;
+    margin: 12vw auto 12vw auto;
+    box-shadow: 0.7vw 0.7vw 0 #162e58;
+  }
+
+  table {
+    padding: 2.5vw;
+  }
+
+  td {
+    padding: 0.4vw;
+  }
+
+  #login-header {
+    font-size: 2.5vw;
+    background-color: #e5ae72;
+    color: white;
+    padding: 1vw;
+  }
+
+  label {
+    font-size: 2.2vw;
+  }
+
+  input {
+    border: solid 0.2vw #162e58;
+    padding: 0.8vw;
+    font-family: mono;
+    width: 22vw;
+  }
+
+  button {
+    padding: 1vw;
+    font-size: 2vw;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #form {
+    background-color: white;
+    width: 26vw;
+    height: 16vw;
+    margin: 12vw auto 12vw auto;
+    box-shadow: 0.7vw 0.7vw 0 #162e58;
+  }
+
+  table {
+    padding: 1.5vw;
+  }
+
+  #login-header {
+    font-size: 1.8vw;
+    background-color: #e5ae72;
+    color: white;
+    padding: 0.5vw;
+  }
+
+  label {
+    font-size: 1.2vw;
+  }
+
+  input {
+    border: solid 0.1vw #162e58;
+    padding: 0.5vw;
+    font-family: mono;
+    width: 13vw;
+  }
+
+  button {
+    padding: 0.5vw;
+    font-size: 1.2vw;
+  }
+}
+
 #form {
   background-color: white;
-  width: 42vw;
-  height: 24vw;
-  margin: 12vw auto 12vw auto;
-  box-shadow: 0.7vw 0.7vw 0 #162e58;
 }
 
 table {
-  padding: 2.5vw;
+  width: 100%;
 }
 
 td {
@@ -16,7 +170,6 @@ td {
 
 button {
   font-family: mono;
-  padding: 1vw;
   color: white;
   background-color: #007380;
   border: solid 0.2vw #007380;
@@ -28,15 +181,10 @@ button:hover {
 }
 
 #login-header {
-  font-size: 2.5vw;
-  padding: 0.5vw;
   background-color: #e5ae72;
   color: white;
-  padding: 1vw;
 }
 
 input {
-  border: solid 0.2vw #162e58;
-  padding: 0.3vw;
   font-family: mono;
 }
