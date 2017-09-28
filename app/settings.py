@@ -141,12 +141,10 @@ REST_FRAMEWORK = {
     )
 }
 
-CORS_ORIGIN_ALLOW_ALL = True
-
-# CORS_ORIGIN_WHITELIST = (
-#     'localhost:3000',
-#     'https://square-check.herokuapp.com'
-# )
+CORS_ORIGIN_WHITELIST = (
+    'localhost:3000',
+    'square-check.herokuapp.com'
+)
 
 if 'SQUARE_CHECK_DEV' in os.environ:
     DEBUG = True
