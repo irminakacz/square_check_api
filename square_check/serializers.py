@@ -21,7 +21,7 @@ class ListSerializer(serializers.ModelSerializer):
 
 
 class UserSerializer(serializers.ModelSerializer):
-    lists = ListSerializer(many=True)
+    lists = serializers.ReadOnlyField(source="list.title")
 
     class Meta:
         model = User

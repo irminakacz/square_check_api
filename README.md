@@ -8,7 +8,7 @@ https://square-check.herokuapp.com/
 `login: guest`
 `password: guest_password`
 
-#### Warning - Slow load
+#### Warning - Slow first load
 Keep in mind that the app is hosted on Heroku free account, so the first load
 may take some time as Heroku puts apps with no traffic to sleep.
 
