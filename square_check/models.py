@@ -14,3 +14,6 @@ class Task(models.Model):
                              on_delete=models.CASCADE)
     task = models.TextField()
     done = models.BooleanField(default=False)
+
+    class Meta:
+        ordering = ('done',)
